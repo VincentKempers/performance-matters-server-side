@@ -1,0 +1,9 @@
+extends layout.pug
+
+block content
+  main#detail
+    each key in data
+     if key !== undefined
+          h3= key.title
+          img(src=key.img alt=key.slug)
+          p= key.desc

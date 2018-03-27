@@ -1,0 +1,32 @@
+{
+  "name": "performance-matters-server-side",
+  "version": "1.0.0",
+  "description": "oba project with a server",
+  "main": "index.js",
+  "scripts": {
+    "build-js": "browserify scripts/filter.js -o public/bundle.js",
+    "build": "npm run build-js",
+    "test": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VincentKempers/performance-matters-server-side.git"
+  },
+  "author": "vincent kempers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VincentKempers/performance-matters-server-side/issues"
+  },
+  "homepage": "https://github.com/VincentKempers/performance-matters-server-side#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "nodemon": "^1.17.2",
+    "path": "^0.12.7",
+    "pug": "^2.0.3",
+    "request": "^2.85.0"
+  },
+  "devDependencies": {
+    "browserify": "^16.1.1"
+  }
+}

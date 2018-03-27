@@ -1,0 +1,9 @@
+extends layout.pug
+
+block content
+  ul#myUL
+    each key in data
+      li
+        a(href="/poster/" + key.title)
+          h3= key.title
+          date= key.date
