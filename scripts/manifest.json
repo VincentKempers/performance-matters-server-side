@@ -1,0 +1,26 @@
+{
+  "name": "Paradiso Posters",
+  "short_name": "Posters",
+  "start_url": "?homescreen=1",
+  "display": "standalone",
+  "background_color": "#bb0200",
+  "description": "Een simpele app waar je oude concert posters kan vinden van Paradiso",
+  "orientation": "portrait",
+  "theme_color": "#bb0200",
+  "icons": [{
+    "src": "/apple-icon.png",
+    "sizes": "100x100",
+    "type": "image/png"
+    },
+    {
+      "src": "/icon-200.png",
+      "sizes": "200x200",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-200.png",
+      "sizes": "600x600",
+      "type": "image/png"
+    }
+  ]
+}

@@ -35,11 +35,13 @@ app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'stylesheets')));
 app.use(express.static(path.join(__dirname, 'scripts')));
+app.use(express.static(path.join(__dirname, 'imgs')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req,res){
   res.redirect('/poster')
 })
+
 
 app.get('/poster', function (req, res) {
   request(host, function(error, request, body){
@@ -54,6 +56,10 @@ app.get('/poster', function (req, res) {
     });
     res.render('index', { data: collection });
   });
+});
+
+app.get('/offline', function (req, res) {
+  res.render('offline');
 });
 
 
