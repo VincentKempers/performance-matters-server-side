@@ -31,3 +31,6 @@ _Fast 3g Speeds_
 
 ![audit results!](docImages/slow3g.png)
 _Slow 3g Speeds_
+
+
+These audits were made after installing browserify!
