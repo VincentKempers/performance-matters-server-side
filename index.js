@@ -34,12 +34,14 @@ var host = 'https://api.data.adamlink.nl/datasets/AdamNet/all/services/endpoint/
 app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'stylesheets')));
-app.use(express.static(path.join(__dirname, 'scripts')));
+// app.use(express.static(path.join(__dirname, 'scripts')));
+app.use(express.static(path.join(__dirname, 'imgs')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req,res){
   res.redirect('/poster')
 })
+
 
 app.get('/poster', function (req, res) {
   request(host, function(error, request, body){
@@ -56,6 +58,10 @@ app.get('/poster', function (req, res) {
   });
 });
 
+app.get('/offline', function (req, res) {
+  res.render('offline');
+});
+
 
 app.get('/poster/:id', function (req, res){
   request(host + req.params.id, function(error, request, body){
@@ -65,6 +71,7 @@ app.get('/poster/:id', function (req, res){
       if (d.title.value === req.params.id) {
         return {
           title: d.title.value,
+          date: d.date.value,
           desc: d.desc.value,
           slug: d.title.value.replace(/[ ]/g, '').toLowerCase(),
           img: d.img.value

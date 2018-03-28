@@ -1,9 +1,10 @@
 extends layout.pug
 
 block content
+  h1 Posters van Paradiso
   ul#myUL
     each key in data
       li
         a(href="/poster/" + key.title)
           h3= key.title
-          date= key.date
+            span= key.date

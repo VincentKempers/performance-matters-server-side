@@ -3,11 +3,17 @@ html(lang="en")
   head
     title Poster van Paradiso
     meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(name="theme-color", content="#bb0200")
     link(rel='stylesheet', href='/index.css', type="text/css")
+    link(rel='manifest', href='/manifest.json', type="text/json")
   body
-    include includes/header.pug
     block content
   script(type="text/javascript" src="../bundle.js")
+  script.
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("../sw.js")
+    }
+
 
 
     

@@ -4,7 +4,7 @@
   "description": "oba project with a server",
   "main": "index.js",
   "scripts": {
-    "build-js": "browserify scripts/filter.js -o public/bundle.js",
+    "build-js": "browserify scripts/index.js -o public/bundle.js",
     "build": "npm run build-js",
     "test": "nodemon"
   },
