@@ -34,7 +34,7 @@ var host = 'https://api.data.adamlink.nl/datasets/AdamNet/all/services/endpoint/
 app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'stylesheets')));
-app.use(express.static(path.join(__dirname, 'scripts')));
+// app.use(express.static(path.join(__dirname, 'scripts')));
 app.use(express.static(path.join(__dirname, 'imgs')));
 app.use(express.static(path.join(__dirname, 'public')));
 
