@@ -19,6 +19,7 @@ to run the server
 * [nodemon](https://nodemon.io/)
 * [body-parser](https://www.npmjs.com/package/body-parser)
 * [browserify](http://browserify.org/)
+* [path](https://nodejs.org/docs/latest/api/path.html)
 
 
 ## audits
@@ -34,3 +35,12 @@ _Slow 3g Speeds_
 
 
 These audits were made after installing browserify!
+
+
+## Service serviceWorker
+https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent
+https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith
+https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting
+https://developer.mozilla.org/en-US/docs/Web/API/Cache/match
+https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker
+[Voorhoede workshop CMD, Thanks Voorhoede](https://github.com/voorhoede/workshop-cmd-pwa/)

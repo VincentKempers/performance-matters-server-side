@@ -1,4 +1,4 @@
-(function(){
+var filterItems = function(){
   const searchItem = document.createElement('input');
   const container = document.querySelector('#myUL');
 
@@ -23,4 +23,8 @@
       }
     });
 
-}())
+};
+
+filterItems();
+
+module.exports = filterItems;
