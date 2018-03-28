@@ -71,6 +71,7 @@ app.get('/poster/:id', function (req, res){
       if (d.title.value === req.params.id) {
         return {
           title: d.title.value,
+          date: d.date.value,
           desc: d.desc.value,
           slug: d.title.value.replace(/[ ]/g, '').toLowerCase(),
           img: d.img.value

@@ -66,10 +66,16 @@ h1 {
   color:white;
 }
 
-p, a {
+p {
   color: black;
   font-weight: bolder;
   max-width: 30em;
+  text-shadow: 2px black;
+  text-decoration: none;
+}
+
+a {
+  color: black;
   text-shadow: 2px black;
   text-decoration: none;
 }
@@ -113,7 +119,7 @@ li {
 li > a {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
 }
 
 input {
