@@ -6,10 +6,6 @@ You can look up posters from old concerts that took place in Paradiso! This App 
 ### How to run
 `npm install`
 
-First run
-`npm run build-js`
-bundle the files with JS
-
 to run the server
 `npm test`
 
@@ -27,6 +23,7 @@ On the performance side after I made a server with nodeJS and expressJS. As temp
 * [body-parser](https://www.npmjs.com/package/body-parser)
 * [browserify](http://browserify.org/)
 * [path](https://nodejs.org/docs/latest/api/path.html)
+* [request](https://github.com/request/request)
 
 
 
@@ -56,6 +53,28 @@ ul#myUL
         h3= key.title
           span= key.date
 ```
+
+
+### bodyParser
+
+bodyParser is the middle man between the request content and the server.
+Used for the request:
+`app.use(bodyParser.urlencoded({extended: false}));`
+
+
+
+### request
+Request is a module that makes a simple get(xhr) request, and works the following:
+
+```JS
+var request = require('request');
+request('URL', function (error, response, body) {
+  console.log(error); // Print the error if one occurred
+  console.log(response); // Print the response status code if a response was received
+  console.log(body); // Print the HTML  homepage.
+});
+```
+
 
 
 
@@ -90,6 +109,7 @@ A service worker is a virtual middleman that actually passes data through. When 
 ### My implementation of the service worker
 
 The first thing the server worker does is getting the CSS the /offline page and the bundled JavaScript. He will cache this under cache name poster-v1. When there will be a new version you can just change the storage name to v2. In the the last `.then` we skipWaiting to stop the double refresh problem.
+
 ```JS
 this.addEventListener('install', function(event){
   event.waitUntil(
@@ -168,6 +188,8 @@ After adding the 512px in the manifest in the array of icons.
 
 
 ### Sources
+* [Joost Faber](https://github.com/joostf)[ example how request works](https://github.com/cmda-minor-web/performance-matters-bootstrap/tree/master/examples/simple-server)
+
 * [Fetch event](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent)
 * [respondWith](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent/respondWith)
 * [skipWaiting](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting)
